@@ -1,0 +1,6 @@
+mobile
+backend/__pycache__
+backend/data/uploads
+**/*.pyc
+**/.expo
+**/node_modules
