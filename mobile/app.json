@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "PicCall",
+    "slug": "piccall",
+    "scheme": "piccall",
+    "version": "0.2.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#14110c"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.piccall.mobile",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "PicCall uses photos you pick for business interiors, lots, and night shots."
+      }
+    },
+    "android": {
+      "package": "app.piccall.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#14110c"
+      }
+    },
+    "extra": {
+      "apiUrl": "http://127.0.0.1:8787"
+    }
+  }
+}
