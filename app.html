@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicCall app</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,650&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-shell">
+  <header class="app-top">
+    <div class="wrap app-top-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" width="30" height="30" alt=""> PicCall</a>
+      <a class="btn btn-ghost" href="business.html">For businesses</a>
+    </div>
+  </header>
+  <main class="wrap" style="padding-top:18px">
+    <div id="list-view">
+      <p class="eyebrow">Fresno · one-trip shop</p>
+      <h1 class="display" style="font-size:2.1rem;margin:4px 0 8px">See it. Rate it. Hit three stops in one loop.</h1>
+      <div class="search-box">
+        <input id="q" type="search" placeholder="Search name, street, or #Hashtag" autocomplete="off">
+      </div>
+      <div class="search-box">
+        <input id="phone-q" type="tel" placeholder="Or paste a phone number to check the safety index">
+        <button class="btn btn-dark" id="lookup-btn">Lookup</button>
+      </div>
+      <div class="chip-row">
+        <button class="btn btn-ghost" id="nearby-btn" type="button">Stores nearby</button>
+        <button class="btn btn-amber" id="trip-btn" type="button">3-stop trip</button>
+        <button class="btn btn-ghost" id="rec-btn" type="button">Recommend</button>
+      </div>
+      <div class="card" id="trip-card" hidden style="margin-bottom:14px"></div>
+      <div class="card" id="rec-card" hidden style="margin-bottom:14px"></div>
+      <p class="muted" id="count">Loading…</p>
+      <div class="biz-list" id="results"></div>
+    </div>
+    <div id="detail-view" hidden></div>
+  </main>
+  <aside class="faq-dock">
+    <button class="btn btn-dark" id="faq-toggle" type="button">Ask PicCall Grok</button>
+    <div class="faq-panel card" id="faq-panel" hidden>
+      <p class="eyebrow">Low-level FAQ brain</p>
+      <h3>Ask before you roll</h3>
+      <p class="muted">Safety index, nearby stores, 3-stop trips, hashtags.</p>
+      <form id="faq-form" class="form">
+        <input id="faq-q" placeholder="Is #OliveLate safe after 10?" autocomplete="off">
+        <button class="btn btn-amber" type="submit">Ask</button>
+      </form>
+      <div id="faq-out"></div>
+    </div>
+  </aside>
+  <div class="toast"></div>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
